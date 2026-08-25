@@ -1,4 +1,4 @@
-สัญญาอนุญาต MIT (MIT License)
+สัญญาอนุญาต (MIT License)
 
 ลิขสิทธิ์ © 2026 NEX
 
