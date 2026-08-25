@@ -1,0 +1,31 @@
+-- ==========================================
+-- NEX Language - Conditions & Logic
+-- ==========================================
+
+score = 85
+
+? score >= 80
+    [>= "Grade: A"]
+:? score >= 70
+    [>= "Grade: B"]
+:? score >= 60
+    [>= "Grade: C"]
+:? score >= 50
+    [>= "Grade: D"]
+:
+    [>= "Grade: F"]
+end
+
+-- Boolean logic
+a = true
+b = false
+
+[>= "a and b: " + (a and b)]
+[>= "a or b: " + (a or b)]
+[>= "not a: " + (not a)]
+
+-- ตรวจสอบค่า
+name = "NEX Language"
+? contains(name, "NEX")
+    [>= "Found NEX!"]
+end

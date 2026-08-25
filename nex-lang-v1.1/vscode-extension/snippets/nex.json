@@ -1,0 +1,51 @@
+{
+    "NEX Function": {
+        "prefix": "fn",
+        "body": [
+            "fn ${1:name}(${2:params})",
+            "    ${3:-- body}",
+            "    -> ${4:result}",
+            "end"
+        ],
+        "description": "Define a NEX function"
+    },
+    "NEX If Statement": {
+        "prefix": "if",
+        "body": [
+            "? ${1:condition}",
+            "    ${2:-- then}",
+            ":",
+            "    ${3:-- else}",
+            "end"
+        ],
+        "description": "NEX if-else statement"
+    },
+    "NEX Repeat Loop": {
+        "prefix": "repeat",
+        "body": [
+            "@ ${1:count}",
+            "    ${2:-- body}",
+            "end"
+        ],
+        "description": "NEX repeat loop"
+    },
+    "NEX For Each": {
+        "prefix": "for",
+        "body": [
+            "@ ${1:item} in ${2:items}",
+            "    ${3:-- body}",
+            "end"
+        ],
+        "description": "NEX for-each loop"
+    },
+    "NEX Output": {
+        "prefix": "out",
+        "body": ["[>= ${1:expression}]"],
+        "description": "NEX output statement"
+    },
+    "NEX Input": {
+        "prefix": "in",
+        "body": ["${1:var} = [<= "${2:prompt}"]"],
+        "description": "NEX input statement"
+    }
+}

@@ -1,0 +1,42 @@
+-- ==========================================
+-- NEX Language - Functions
+-- ==========================================
+
+-- ฟังก์ชันพื้นฐาน
+fn greet(name)
+    -> "Hello, " + name + "!"
+end
+
+[>= greet("NEX User")]
+
+-- ฟังก์ชันคณิตศาสตร์
+fn add(a, b)
+    -> a + b
+end
+
+fn multiply(a, b)
+    -> a * b
+end
+
+[>= "5 + 3 = " + add(5, 3)]
+[>= "4 * 7 = " + multiply(4, 7)]
+
+-- ฟังก์ชัน recursive
+fn factorial(n)
+    ? n <= 1
+        -> 1
+    end
+    -> n * factorial(n - 1)
+end
+
+[>= "5! = " + factorial(5)]
+
+-- ฟังก์ชันซ้อนกัน
+fn outer()
+    fn inner()
+        -> 42
+    end
+    -> inner()
+end
+
+[>= "Nested result: " + outer()]

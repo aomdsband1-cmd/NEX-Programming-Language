@@ -1,0 +1,19 @@
+-- ==========================================
+-- NEX Language - Import Demo
+-- ==========================================
+
+-- Import Python math module
+=> math (pi, sin, cos, sqrt)
+
+[>= "PI = " + pi]
+[>= "sin(90) = " + sin(90)]
+[>= "sqrt(16) = " + sqrt(16)]
+
+-- Import random
+=> random
+
+[>= "Random: " + random.random()]
+
+-- Import with alias
+=> math as m
+[>= "m.pi = " + m.pi]

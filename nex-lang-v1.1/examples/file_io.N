@@ -1,0 +1,13 @@
+-- ==========================================
+-- NEX Language - File I/O
+-- ==========================================
+
+-- Write to file
+<เปิด "output.txt">> "Hello from NEX Language!" end:
+
+[>= "File written successfully!"]
+
+-- Read file (via Python import)
+=> io
+content = io.open("output.txt", "r").read()
+[>= "Content: " + content]

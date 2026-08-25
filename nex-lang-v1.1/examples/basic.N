@@ -1,0 +1,30 @@
+-- ==========================================
+-- NEX Language - Basic Example
+-- ==========================================
+-- ตัวแปรพื้นฐาน
+name = "NEX"
+version = 1.1
+is_awesome = true
+
+-- แสดงผล
+[>= "Welcome to " + name + " v" + version]
+
+-- ตัวเลข
+x = 10
+y = 20
+[>= x + y]
+[>= x * y]
+[>= x / 2]
+
+-- สตริง
+msg = "Hello"
+[>= upper(msg)]
+[>= lower("WORLD")]
+
+-- ลิสต์
+items = [1, 2, 3, 4, 5]
+[>= "List: " + items]
+[>= "Length: " + len(items)]
+
+-- รับข้อมูล (ถ้ารันใน REPL)
+-- name = [<= "Enter your name: "]

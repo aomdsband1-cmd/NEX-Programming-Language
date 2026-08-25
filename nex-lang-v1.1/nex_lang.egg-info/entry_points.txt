@@ -1,0 +1,2 @@
+[console_scripts]
+nex = interpreter:main

@@ -1,0 +1,43 @@
+{
+    "name": "nex-lang",
+    "displayName": "NEX Language",
+    "description": "Syntax highlighting, snippets, and language support for NEX programming language (.N and .nex files)",
+    "version": "1.1.0",
+    "publisher": "NEX",
+    "author": {
+        "name": "NEX",
+        "email": "nex@nex-lang.dev"
+    },
+    "license": "MIT",
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": ["Programming Languages"],
+    "keywords": ["NEX", "nex", ".N", ".nex", "language", "interpreter"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nex-lang/nex-lang"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "nex",
+            "aliases": ["NEX", "nex"],
+            "extensions": [".N", ".nex"],
+            "configuration": "./language-configuration.json",
+            "icon": {
+                "light": "./file-icon.png",
+                "dark": "./file-icon.png"
+            }
+        }],
+        "grammars": [{
+            "language": "nex",
+            "scopeName": "source.nex",
+            "path": "./syntaxes/nex.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "nex",
+            "path": "./snippets/nex.json"
+        }]
+    }
+}
