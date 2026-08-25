@@ -218,4 +218,4 @@ build-exe.bat
 
 ## Author
 
-**NEX** — [veerawatseeparang8@gmail.com]
+**NEX** [nex@nex-lang.dev](mailto:veerawatseeparang8@gmail.com)
