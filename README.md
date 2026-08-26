@@ -1,2 +1,221 @@
-# NEX-Programming-Language
-⚡NEX Programming Language (v1.1)  *NEX* is a lightweight scripting language designed for minimalist, expressive syntax. Created by **Founder NEX**, it supports `.n` and `.nex` file extensions with a built-in interpreter and Python interoperability[cite: 5, 9, 10]. 
+<div align="center">
+
+![NEX Language](assets/icon.png)
+
+# NEX Programming Language v1.1
+
+> A lightweight scripting language with Python integration — now with `.N` extension support!
+
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![VS Code](https://img.shields.io/badge/VS%20Code-Extension-green.svg)](#vs-code-extension)
+
+[English](#english) | [ภาษาไทย](#thai)
+
+</div>
+
+---
+
+<a name="english"></a>
+## English
+
+### Features
+- **`.N` file extension** — Clean, short extension for NEX source files
+- **Python integration** — Import and use any Python module seamlessly
+- **Minimal syntax** — Easy to learn, inspired by Lua and Python
+- **VS Code Extension** — Syntax highlighting, snippets, and file icons
+- **Cross-platform** — Works on Windows, Linux, and macOS
+- **Standalone executable** — Build to `.exe` with PyInstaller
+
+### Installation
+
+#### Method 1: Automatic Installer (Recommended)
+
+**Windows:**
+```powershell
+cd nex-lang-v1.1
+.\install.bat
+```
+
+**Linux / macOS:**
+```bash
+cd nex-lang-v1.1
+./install.sh
+```
+
+Then restart VS Code and PowerShell/CMD.
+
+#### Method 2: pip install
+```bash
+pip install nex-lang
+nex hello.N
+```
+
+#### Method 3: Direct Run
+```bash
+python interpreter.py hello.N
+```
+
+### Quick Start
+
+Create a file `hello.N`:
+```N
+name = "World"
+[>= "Hello, " + name + "!"]
+
+fn greet(user)
+    -> "Welcome, " + user
+end
+
+[>= greet("NEX Developer")]
+```
+
+Run it:
+```bash
+nex hello.N
+```
+
+### Syntax Overview
+
+| Feature | Syntax | Example |
+|---------|--------|---------|
+| Output | `[>= expr]` | `[>= "Hello"]` |
+| Input | `[<= prompt]` | `name = [<= "Name: "]` |
+| Variable | `name = value` | `x = 42` |
+| If | `? condition` | `? x > 5` |
+| Else If | `:? condition` | `:? x > 3` |
+| Else | `:` | `:` |
+| Repeat | `@ count` | `@ 5` |
+| For Each | `@ var in list` | `@ i in items` |
+| Function | `fn name(params)` | `fn add(a, b)` |
+| Return | `-> expr` | `-> a + b` |
+| Import | `=> module` | `=> math` |
+| File Write | `<เปิด "file">> "content" end:` | `<เปิด "out.txt">> "hi" end:` |
+
+### Examples
+
+See the `examples/` directory for:
+- `basic.N` — Variables, strings, lists
+- `conditions.N` — If/else and boolean logic
+- `loops.N` — Repeat and for-each loops
+- `functions.N` — Function definitions and recursion
+- `calculator.N` — Interactive calculator
+- `import_demo.N` — Python module integration
+- `file_io.N` — File operations
+- `fizzbuzz.N` — Classic FizzBuzz implementation
+
+### VS Code Extension
+
+After running `install.bat` or `install.sh`:
+1. Restart VS Code
+2. Open any `.N` file
+3. Enjoy syntax highlighting and code snippets!
+
+### Building Standalone Executable
+
+**Windows:**
+```batch
+build-exe.bat
+```
+
+**Linux / macOS:**
+```bash
+./build-exe.sh
+```
+
+Output: `dist/nex.exe` (Windows) or `dist/nex` (Unix)
+
+---
+
+<a name="thai"></a>
+## ภาษาไทย
+
+### ฟีเจอร์
+- **นามสกุลไฟล์ `.N`** — สั้น กระชับ สำหรับไฟล์ NEX
+- **เชื่อมต่อ Python** — ใช้โมดูล Python ได้ทันที
+- **ไวยากรณ์เรียบง่าย** — เรียนรู้ง่าย ดัดแปลงจาก Lua และ Python
+- **VS Code Extension** — ไฮไลต์สี สนิปเป็ต และไอคอนไฟล์
+- **รองรับทุกแพลตฟอร์ม** — Windows, Linux, macOS
+- **สร้าง .exe ได้** — ใช้ PyInstaller สร้างไฟล์ประมวลผลเดี่ยว
+
+### ติดตั้ง
+
+#### วิธีที่ 1: ติดตั้งอัตโนมัติ (แนะนำ)
+
+**Windows:**
+```powershell
+cd nex-lang-v1.1
+.\install.bat
+```
+
+**Linux / macOS:**
+```bash
+cd nex-lang-v1.1
+./install.sh
+```
+
+แล้วรีสตาร์ท VS Code และ PowerShell/CMD
+
+#### วิธีที่ 2: ติดตั้งผ่าน pip
+```bash
+pip install nex-lang
+nex hello.N
+```
+
+#### วิธีที่ 3: รันโดยตรง
+```bash
+python interpreter.py hello.N
+```
+
+### ไวยากรณ์พื้นฐาน
+
+| ฟีเจอร์ | ไวยากรณ์ | ตัวอย่าง |
+|---------|---------|---------|
+| แสดงผล | `[>= expr]` | `[>= "สวัสดี"]` |
+| รับข้อมูล | `[<= prompt]` | `ชื่อ = [<= "ชื่อ: "]` |
+| ตัวแปร | `ชื่อ = ค่า` | `x = 42` |
+| ถ้า | `? เงื่อนไข` | `? x > 5` |
+| หรือถ้า | `:? เงื่อนไข` | `:? x > 3` |
+| อื่นๆ | `:` | `:` |
+| ทำซ้ำ | `@ จำนวน` | `@ 5` |
+| วนลูป | `@ ตัวแปร in ลิสต์` | `@ i in items` |
+| ฟังก์ชัน | `fn ชื่อ(พารามิเตอร์)` | `fn add(a, b)` |
+| คืนค่า | `-> ค่า` | `-> a + b` |
+| นำเข้า | `=> โมดูล` | `=> math` |
+| เขียนไฟล์ | `<เปิด "ไฟล์">> "เนื้อหา" end:` | `<เปิด "out.txt">> "hi" end:` |
+
+### ตัวอย่างโปรแกรม
+
+ดูในโฟลเดอร์ `examples/`:
+- `basic.N` — ตัวแปร สตริง ลิสต์
+- `conditions.N` — เงื่อนไขและตรรกะ
+- `loops.N` — ลูปทำซ้ำและวนลูป
+- `functions.N` — ฟังก์ชันและ recursion
+- `calculator.N` — เครื่องคิดเลข
+- `import_demo.N` — ใช้งานโมดูล Python
+- `file_io.N` — อ่านเขียนไฟล์
+- `fizzbuzz.N` — โปรแกรม FizzBuzz
+
+### สร้างไฟล์ประมวลผลเดี่ยว (.exe)
+
+**Windows:**
+```batch
+build-exe.bat
+```
+
+**Linux / macOS:**
+```bash
+./build-exe.sh
+```
+
+ผลลัพธ์: `dist/nex.exe` (Windows) หรือ `dist/nex` (Unix)
+
+---
+
+## License
+
+[MIT License](LICENSE) — ใช้ได้ฟรีทั้งส่วนตัวและเชิงพาณิชย์
+
+## Author
+
+**NEX** — [nex@nex-lang.dev](mailto:nex@nex-lang.dev)
