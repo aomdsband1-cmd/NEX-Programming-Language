@@ -1,0 +1,9 @@
+LICENSE
+README.md
+interpreter.py
+setup.py
+nex_lang.egg-info/PKG-INFO
+nex_lang.egg-info/SOURCES.txt
+nex_lang.egg-info/dependency_links.txt
+nex_lang.egg-info/entry_points.txt
+nex_lang.egg-info/top_level.txt

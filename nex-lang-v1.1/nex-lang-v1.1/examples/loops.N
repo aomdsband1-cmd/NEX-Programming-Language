@@ -1,0 +1,29 @@
+-- ==========================================
+-- NEX Language - Loops
+-- ==========================================
+
+-- Repeat loop
+[>= "=== Repeat 5 times ==="]
+@ 5
+    [>= "Hello NEX!"]
+end
+
+-- For each with list
+[>= "=== For Each List ==="]
+fruits = ["apple", "banana", "cherry"]
+@ fruit in fruits
+    [>= "Fruit: " + fruit]
+end
+
+-- For each with string
+[>= "=== For Each String ==="]
+@ char in "NEX"
+    [>= "Char: " + char]
+end
+
+-- For each with range
+[>= "=== Range Loop ==="]
+nums = range(1, 6)
+@ n in nums
+    [>= "Number: " + n]
+end
